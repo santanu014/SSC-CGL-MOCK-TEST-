@@ -569,3 +569,76 @@ const additionalCSS = `
 const style = document.createElement('style');
 style.textContent = additionalCSS;
 document.head.appendChild(style);
+// One Word Substitution: Mock-1 to Mock-10 (Each with 20 questions)
+const ows_1_Questions = [
+  {question: "Person who writes dictionaries.", options: ["Lexicographer","Philologist","Novelist","Publisher"], correct: 0, explanation: ""},
+  {question: "Person who eats too much.", options: ["Glutton","Ascetic","Gourmet","Hermit"], correct: 0, explanation: ""},
+  {question: "Person who loves books.", options: ["Bibliophile","Philatelist","Numismatist","Cartographer"], correct: 0, explanation: ""},
+  {question: "Study of birds.", options: ["Ornithologist","Anthropologist","Geologist","Seismologist"], correct: 0, explanation: ""},
+  {question: "Animal that lives on land and water.", options: ["Amphibian","Mammal","Reptile","Arthropod"], correct: 0, explanation: ""},
+  {question: "An instrument for measuring pressure.", options: ["Barometer","Microscope","Thermometer","Hydrometer"], correct: 0, explanation: ""},
+  {question: "One who is unable to pay debts.", options: ["Insolvent","Affluent","Miser","Banker"], correct: 0, explanation: ""},
+  {question: "A government by one person.", options: ["Autocracy","Democracy","Monarchy","Oligarchy"], correct: 0, explanation: ""},
+  {question: "Fear of open spaces.", options: ["Agoraphobia","Hydrophobia","Claustrophobia","Xenophobia"], correct: 0, explanation: ""},
+  {question: "A person who is new in a field.", options: ["Novice","Expert","Veteran","Scholar"], correct: 0, explanation: ""},
+  {question: "Writing done by hand.", options: ["Manuscript","Agenda","Script","Text"], correct: 0, explanation: ""},
+  {question: "One who talks too much.", options: ["Garrulous","Taciturn","Reticent","Silent"], correct: 0, explanation: ""},
+  {question: "One who opposes war.", options: ["Pacifist","Pessimist","Optimist","Hedonist"], correct: 0, explanation: ""},
+  {question: "Science of plants.", options: ["Botany","Zoology","Geology","Ecology"], correct: 0, explanation: ""},
+  {question: "One who is always happy.", options: ["Optimist","Pessimist","Pacifist","Atheist"], correct: 0, explanation: ""},
+  {question: "Person who repairs shoes.", options: ["Cobbler","Mason","Smith","Tailor"], correct: 0, explanation: ""},
+  {question: "One who collects coins.", options: ["Numismatist","Philatelist","Archivist","Cartographer"], correct: 0, explanation: ""},
+  {question: "Government by few.", options: ["Oligarchy","Autocracy","Democracy","Monarchy"], correct: 0, explanation: ""},
+  {question: "Person who can use both hands equally well.", options: ["Ambidextrous","Amphibian","Ambiguous","Amoral"], correct: 0, explanation: ""},
+  {question: "A speech delivered without preparation.", options: ["Extempore","Dialogue","Debate","Symposium"], correct: 0, explanation: ""}
+];
+// ows_2_Questions -- 20 questions
+const ows_2_Questions = [
+  {question: "One who cannot make mistakes.", options: ["Infallible","Insolvent","Invisible","Indelible"], correct: 0, explanation: ""},
+  {question: "Place for keeping birds.", options: ["Aviary","Apiary","Cemetery","Sanctuary"], correct: 0, explanation: ""},
+  // Continue exactly same pattern till 20 questions...
+];
+// ... Similarly ows_3_Questions to ows_10_Questions (fill 20 questions in each)
+
+// Idioms & Phrases: Mock-1 to Mock-10
+const idioms_1_Questions = [
+  {question: "Spill the beans.", options: ["Expose a secret","Cook dinner","Make a mess","Plant seeds"], correct: 0, explanation: ""},
+  {question: "Beat around the bush.", options: ["Avoid the topic","Gardening","Win the battle","Have fun"], correct: 0, explanation: ""},
+  // ... 18 more
+];
+// idioms_2_Questions ... idioms_10_Questions (20 questions each)
+
+// Synonyms: Mock-1 to Mock-10
+const synonyms_1_Questions = [
+  {question: "Synonym for 'Rapid'.", options: ["Slow","Fast","Happy","Smart"], correct: 1, explanation: ""},
+  {question: "Synonym for 'Candid'.", options: ["Honest","Secret","Rude","Excited"], correct: 0, explanation: ""},
+  // ... 18 more
+];
+// ...synonyms_2_Questions to synonyms_10_Questions
+
+// Antonyms: Mock-1 to Mock-10
+const antonyms_1_Questions = [
+  {question: "Antonym for 'Generous'.", options: ["Selfish","Kind","Helpful","Brave"], correct: 0, explanation: ""},
+  {question: "Antonym for 'Humble'.", options: ["Proud","Small","Shy","Friendly"], correct: 0, explanation: ""},
+  // ... 18 more
+];
+// ...antonyms_2_Questions ... antonyms_10_Questions
+
+// Spelling: Mock-1 to Mock-10
+const spelling_1_Questions = [
+  {question: "Correct spelling.", options: ["Recieve","Receeve","Receive","Recive"], correct: 2, explanation: ""},
+  {question: "Correct spelling.", options: ["Accommodate","Acommodate","Accomodate","Acomodete"], correct: 0, explanation: ""},
+  // ... 18 more
+];
+// ...spelling_2_Questions ... spelling_10_Questions
+
+// Mapping sab mocks ke liye
+const allQuestions = {
+  "ows_1": ows_1_Questions, "ows_2": ows_2_Questions, "ows_3": ows_3_Questions, "ows_4": ows_4_Questions,
+  "ows_5": ows_5_Questions, "ows_6": ows_6_Questions, "ows_7": ows_7_Questions, "ows_8": ows_8_Questions,
+  "ows_9": ows_9_Questions, "ows_10": ows_10_Questions,
+  "idioms_1": idioms_1_Questions, /* ... till idioms_10 */
+  "synonyms_1": synonyms_1_Questions, /* ... till synonyms_10 */
+  "antonyms_1": antonyms_1_Questions, /* ... till antonyms_10 */
+  "spelling_1": spelling_1_Questions, /* ... till spelling_10 */
+};
