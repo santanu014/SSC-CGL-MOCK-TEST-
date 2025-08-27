@@ -70,7 +70,123 @@
                             <span><i class="fas fa-question-circle"></i> 25 Questions</span>
                         </div>
                         <button class="btn-primary" onclick="startTest('vocab')">Start Test</button>
-                    </div>
+                    </div><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SSC CGL Vocabulary Mock Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>SSC CGL 2025 Vocabulary Mock Test</h1>
+        <nav>
+            <!-- Nav can be left empty or add extra links -->
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>English Vocabulary Mocks</h2>
+            <!-- OWS Section -->
+            <div class="mock-section">
+                <h3>One Word Substitution</h3>
+                <div class="mock-buttons">
+                    <button onclick="startTest('ows_1')">Mock-1</button>
+                    <button onclick="startTest('ows_2')">Mock-2</button>
+                    <button onclick="startTest('ows_3')">Mock-3</button>
+                    <button onclick="startTest('ows_4')">Mock-4</button>
+                    <button onclick="startTest('ows_5')">Mock-5</button>
+                    <button onclick="startTest('ows_6')">Mock-6</button>
+                    <button onclick="startTest('ows_7')">Mock-7</button>
+                    <button onclick="startTest('ows_8')">Mock-8</button>
+                    <button onclick="startTest('ows_9')">Mock-9</button>
+                    <button onclick="startTest('ows_10')">Mock-10</button>
+                </div>
+            </div>
+
+            <!-- Idioms Section -->
+            <div class="mock-section">
+                <h3>Idioms & Phrases</h3>
+                <div class="mock-buttons">
+                    <button onclick="startTest('idioms_1')">Mock-1</button>
+                    <button onclick="startTest('idioms_2')">Mock-2</button>
+                    <button onclick="startTest('idioms_3')">Mock-3</button>
+                    <button onclick="startTest('idioms_4')">Mock-4</button>
+                    <button onclick="startTest('idioms_5')">Mock-5</button>
+                    <button onclick="startTest('idioms_6')">Mock-6</button>
+                    <button onclick="startTest('idioms_7')">Mock-7</button>
+                    <button onclick="startTest('idioms_8')">Mock-8</button>
+                    <button onclick="startTest('idioms_9')">Mock-9</button>
+                    <button onclick="startTest('idioms_10')">Mock-10</button>
+                </div>
+            </div>
+
+            <!-- Synonyms Section -->
+            <div class="mock-section">
+                <h3>Synonyms</h3>
+                <div class="mock-buttons">
+                    <button onclick="startTest('synonyms_1')">Mock-1</button>
+                    <button onclick="startTest('synonyms_2')">Mock-2</button>
+                    <button onclick="startTest('synonyms_3')">Mock-3</button>
+                    <button onclick="startTest('synonyms_4')">Mock-4</button>
+                    <button onclick="startTest('synonyms_5')">Mock-5</button>
+                    <button onclick="startTest('synonyms_6')">Mock-6</button>
+                    <button onclick="startTest('synonyms_7')">Mock-7</button>
+                    <button onclick="startTest('synonyms_8')">Mock-8</button>
+                    <button onclick="startTest('synonyms_9')">Mock-9</button>
+                    <button onclick="startTest('synonyms_10')">Mock-10</button>
+                </div>
+            </div>
+
+            <!-- Antonyms Section -->
+            <div class="mock-section">
+                <h3>Antonyms</h3>
+                <div class="mock-buttons">
+                    <button onclick="startTest('antonyms_1')">Mock-1</button>
+                    <button onclick="startTest('antonyms_2')">Mock-2</button>
+                    <button onclick="startTest('antonyms_3')">Mock-3</button>
+                    <button onclick="startTest('antonyms_4')">Mock-4</button>
+                    <button onclick="startTest('antonyms_5')">Mock-5</button>
+                    <button onclick="startTest('antonyms_6')">Mock-6</button>
+                    <button onclick="startTest('antonyms_7')">Mock-7</button>
+                    <button onclick="startTest('antonyms_8')">Mock-8</button>
+                    <button onclick="startTest('antonyms_9')">Mock-9</button>
+                    <button onclick="startTest('antonyms_10')">Mock-10</button>
+                </div>
+            </div>
+
+            <!-- Spelling Section -->
+            <div class="mock-section">
+                <h3>Spelling</h3>
+                <div class="mock-buttons">
+                    <button onclick="startTest('spelling_1')">Mock-1</button>
+                    <button onclick="startTest('spelling_2')">Mock-2</button>
+                    <button onclick="startTest('spelling_3')">Mock-3</button>
+                    <button onclick="startTest('spelling_4')">Mock-4</button>
+                    <button onclick="startTest('spelling_5')">Mock-5</button>
+                    <button onclick="startTest('spelling_6')">Mock-6</button>
+                    <button onclick="startTest('spelling_7')">Mock-7</button>
+                    <button onclick="startTest('spelling_8')">Mock-8</button>
+                    <button onclick="startTest('spelling_9')">Mock-9</button>
+                    <button onclick="startTest('spelling_10')">Mock-10</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="quiz-section" style="display:none;">
+            <h2 id="quiz-title"></h2>
+            <div id="quiz-container"></div>
+            <button id="next-btn" onclick="nextQuestion()">Next</button>
+            <button id="submit-btn" onclick="submitTest()" style="display:none;">Submit Test</button>
+            <div id="quiz-result"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+                    
 
                     <div class="test-card coming-soon">
                         <div class="test-icon">
