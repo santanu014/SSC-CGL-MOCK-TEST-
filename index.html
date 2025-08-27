@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SSC CGL Mock Test - Free Online Practice</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="logo"><i class="fas fa-graduation-cap"></i> SSC CGL Mock Test</h1>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#tests">Mock Tests</a></li>
+                    <li><a href="#results">Results</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>SSC CGL 2025 Mock Test Series</h2>
+                    <p>Free Online Practice Tests for SSC Combined Graduate Level Exam</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <i class="fas fa-users"></i>
+                            <span class="stat-number" data-target="10000">0</span>
+                            <span class="stat-label">Students</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-clipboard-list"></i>
+                            <span class="stat-number" data-target="50">0</span>
+                            <span class="stat-label">Mock Tests</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-award"></i>
+                            <span class="stat-number" data-target="95">0</span>
+                            <span class="stat-label">Success Rate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tests" class="test-section">
+            <div class="container">
+                <h2 class="section-title">Available Mock Tests</h2>
+                <div class="test-grid">
+                    <div class="test-card">
+                        <div class="test-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3>English Vocabulary</h3>
+                        <p>One Word Substitution, Idioms & Phrases, Synonyms & Antonyms</p>
+                        <div class="test-info">
+                            <span><i class="fas fa-clock"></i> 30 Min</span>
+                            <span><i class="fas fa-question-circle"></i> 25 Questions</span>
+                        </div>
+                        <button class="btn-primary" onclick="startTest('vocab')">Start Test</button>
+                    </div>
+
+                    <div class="test-card coming-soon">
+                        <div class="test-icon">
+                            <i class="fas fa-landmark"></i>
+                        </div>
+                        <h3>History & Culture</h3>
+                        <p>Ancient, Medieval & Modern History, Art & Culture</p>
+                        <div class="test-info">
+                            <span><i class="fas fa-clock"></i> 45 Min</span>
+                            <span><i class="fas fa-question-circle"></i> 30 Questions</span>
+                        </div>
+                        <button class="btn-secondary" disabled>Coming Soon</button>
+                    </div>
+
+                    <div class="test-card coming-soon">
+                        <div class="test-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3>Geography</h3>
+                        <p>Physical, Human & Economic Geography of India & World</p>
+                        <div class="test-info">
+                            <span><i class="fas fa-clock"></i> 45 Min</span>
+                            <span><i class="fas fa-question-circle"></i> 30 Questions</span>
+                        </div>
+                        <button class="btn-secondary" disabled>Coming Soon</button>
+                    </div>
+
+                    <div class="test-card coming-soon">
+                        <div class="test-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h3>Polity</h3>
+                        <p>Indian Constitution, Governance, Rights & Duties</p>
+                        <div class="test-info">
+                            <span><i class="fas fa-clock"></i> 45 Min</span>
+                            <span><i class="fas fa-question-circle"></i> 30 Questions</span>
+                        </div>
+                        <button class="btn-secondary" disabled>Coming Soon</button>
+                    </div>
+
+                    <div class="test-card coming-soon">
+                        <div class="test-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3>Mathematics</h3>
+                        <p>Arithmetic, Algebra, Geometry, Trigonometry</p>
+                        <div class="test-info">
+                            <span><i class="fas fa-clock"></i> 60 Min</span>
+                            <span><i class="fas fa-question-circle"></i> 35 Questions</span>
+                        </div>
+                        <button class="btn-secondary" disabled>Coming Soon</button>
+                    </div>
+
+                    <div class="test-card coming-soon">
+                        <div class="test-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Reasoning</h3>
+                        <p>Logical & Analytical Reasoning, Verbal & Non-verbal</p>
+                        <div class="test-info">
+                            <span><i class="fas fa-clock"></i> 60 Min</span>
+                            <span><i class="fas fa-question-circle"></i> 35 Questions</span>
+                        </div>
+                        <button class="btn-secondary" disabled>Coming Soon</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="results" class="results-section">
+            <div class="container">
+                <h2 class="section-title">Your Performance</h2>
+                <div class="results-container">
+                    <div class="no-results">
+                        <i class="fas fa-chart-line"></i>
+                        <p>Take your first mock test to see results here</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Quiz Modal -->
+    <div id="quiz-modal" class="modal">
+        <div class="modal-content">
+            <div class="quiz-header">
+                <h3 id="quiz-title">English Vocabulary Mock Test</h3>
+                <div class="quiz-info">
+                    <span id="question-counter">Question 1 of 25</span>
+                    <span id="timer">30:00</span>
+                </div>
+                <button class="close-btn" onclick="closeQuiz()">&times;</button>
+            </div>
+            
+            <div class="quiz-body">
+                <div class="question-container">
+                    <h4 id="question-text">Loading question...</h4>
+                    <div class="options-container" id="options-container">
+                        <!-- Options will be loaded here -->
+                    </div>
+                </div>
+                
+                <div class="quiz-controls">
+                    <button id="prev-btn" onclick="previousQuestion()" disabled>Previous</button>
+                    <button id="next-btn" onclick="nextQuestion()">Next</button>
+                    <button id="submit-btn" onclick="submitQuiz()" style="display:none;">Submit Test</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Result Modal -->
+    <div id="result-modal" class="modal">
+        <div class="modal-content">
+            <div class="result-header">
+                <h3>Test Results</h3>
+                <button class="close-btn" onclick="closeResult()">&times;</button>
+            </div>
+            <div class="result-body">
+                <div class="score-card">
+                    <div class="score-circle">
+                        <div class="score-percentage" id="score-percentage">0%</div>
+                    </div>
+                    <div class="score-details">
+                        <div class="score-item">
+                            <span class="label">Correct:</span>
+                            <span class="value" id="correct-count">0</span>
+                        </div>
+                        <div class="score-item">
+                            <span class="label">Incorrect:</span>
+                            <span class="value" id="incorrect-count">0</span>
+                        </div>
+                        <div class="score-item">
+                            <span class="label">Unanswered:</span>
+                            <span class="value" id="unanswered-count">0</span>
+                        </div>
+                        <div class="score-item">
+                            <span class="label">Time Taken:</span>
+                            <span class="value" id="time-taken">0 min</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="result-actions">
+                    <button class="btn-primary" onclick="retakeTest()">Retake Test</button>
+                    <button class="btn-secondary" onclick="closeResult()">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4><i class="fas fa-graduation-cap"></i> SSC CGL Mock Test</h4>
+                    <p>Free online practice tests for SSC CGL aspirants. Prepare with confidence and achieve your goals.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#tests">Mock Tests</a></li>
+                        <li><a href="#results">Results</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-envelope"></i> support@santanuacharya311@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +91 8984734595</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SSC CGL Mock Test. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
