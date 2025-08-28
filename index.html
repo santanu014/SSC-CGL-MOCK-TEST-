@@ -20,39 +20,74 @@
       </p>
     </div>
 
-    <!-- Vocabulary Section -->
-    <div class="section">
+  <main>
+    <!-- Sections -->
+    <section class="category">
       <h2>1. Vocabulary</h2>
-      
-      <div class="sub-section">
+      <button class="section-btn" onclick="toggleSubSection('vocab-sub')">Open Vocabulary Sections</button>
+      <div id="vocab-sub" class="sub-sections hidden">
         <h3>One Word Substitution</h3>
-        <button onclick="startMock('ows1')">Mock-1</button>
-      </div>
+        <button onclick="startMock('ows-mock1')">Mock-1 (20 Questions)</button>
 
-      <div class="sub-section">
         <h3>Idioms and Phrases</h3>
-        <button onclick="startMock('idioms1')">Mock-1</button>
+        <button onclick="startMock('idioms-mock1')">Mock-1 (20 Questions)</button>
         <button disabled>Mock-2 (Coming Soon)</button>
+
+        <h3>Synonyms & Antonyms</h3>
+        <button disabled>Mock-1 (Coming Soon)</button>
+
+        <h3>Spellings</h3>
+        <button disabled>Mock-1 (Coming Soon)</button>
       </div>
-    </div>
+    </section>
 
-    <!-- Mathematics -->
-    <div class="section">
+    <section class="category">
       <h2>2. Mathematics</h2>
-      <button disabled>Test Coming Soon</button>
-    </div>
+      <button disabled>Tests Coming Soon</button>
+    </section>
 
-    <!-- Reasoning -->
-    <div class="section">
+    <section class="category">
       <h2>3. Reasoning</h2>
-      <button disabled>Test Coming Soon</button>
-    </div>
+      <button disabled>Tests Coming Soon</button>
+    </section>
 
-    <!-- GK & GS -->
-    <div class="section">
-      <h2>4. GK and GS</h2>
-      <button disabled>Test Coming Soon</button>
-    </div>
+    <section class="category">
+      <h2>4. GK & GS</h2>
+      <button disabled>Tests Coming Soon</button>
+    </section>
+
+    <!-- Quiz Container -->
+    <section id="quiz-container" class="hidden">
+      <h2 id="quiz-title"></h2>
+      <div id="question-container"></div>
+      <div class="quiz-nav">
+        <button id="prev-btn" onclick="prevQuestion()">Previous</button>
+        <button id="next-btn" onclick="nextQuestion()">Next</button>
+        <button id="submit-btn" onclick="submitQuiz()">Submit</button>
+      </div>
+    </section>
+
+    <!-- Result Container -->
+    <section id="result-container" class="hidden">
+      <h2>Result</h2>
+      <p id="score"></p>
+      <p id="rank"></p>
+      <p id="percentile"></p>
+      <p id="accuracy"></p>
+      <button onclick="location.reload()">Back to Home</button>
+    </section>
+  </main>
+
+  <footer>
+    <h3>About</h3>
+    <p>This website is created for SSC aspirants to practice Vocabulary, Maths, Reasoning, and GK and GS through free mock tests.</p>
+    <h3>Contact</h3>
+    <p>Email: support@ssc-mocktest.com</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
 
     <!-- Quiz Area -->
     <div id="quiz-container" class="quiz hidden">
@@ -77,8 +112,8 @@
     <div class="section footer-section">
       <h2>Contact</h2>
       <p>If you have any feedback or suggestions, feel free to reach out:</p>
-      <p>Email: <a href="mailto: santanuacharya3111@gmail.com">ssc.mocktest@gmail.com</a></p>
-      <p>GitHub: <a href="https://github.com/tanu014" target="_blank">github.com/tanu014</a></p>
+      <p>Email: <a href="mailto: santanuacharya3111@gmail.com">santanuacharya311@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/santanu014" target="_blank">github.com/santanu014</a></p>
     </div>
 
   </div>
