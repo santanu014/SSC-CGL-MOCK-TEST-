@@ -1,97 +1,140 @@
-// Mock Tests Data
-const quizzes = {
-  ows1: {
-    title: "One Word Substitution - Mock 1",
-    questions: [
-      { q: "One who loves mankind", options: ["Philanthropist", "Misanthrope", "Patriot", "Optimist"], answer: 0 },
-      { q: "One who knows everything", options: ["Omnipotent", "Omniscient", "Omnipresent", "Specialist"], answer: 1 },
-      { q: "A place where bees are kept", options: ["Apiary", "Aviary", "Sanctuary", "Stable"], answer: 0 },
-      { q: "One who hates women", options: ["Misogynist", "Masochist", "Monk", "Feminist"], answer: 0 },
-      { q: "A person who does not believe in God", options: ["Theist", "Atheist", "Agnostic", "Heretic"], answer: 1 },
-      // Add upto 20 questions
-    ]
-  },
-
-  idioms1: {
-    title: "Idioms and Phrases - Mock 1",
-    questions: [
-      { q: "Meaning of: A blessing in disguise", options: ["An apparent misfortune that turns out beneficial", "A curse", "Something useless", "Unexpected disaster"], answer: 0 },
-      { q: "Meaning of: Cry over spilt milk", options: ["Regret something that cannot be undone", "Cry unnecessarily", "Be foolish", "Complain too much"], answer: 0 },
-      { q: "Meaning of: Once in a blue moon", options: ["Very rarely", "Very often", "At night", "Every full moon"], answer: 0 },
-      { q: "Meaning of: Hit the sack", options: ["Go to sleep", "Start working", "Fight with someone", "Pack luggage"], answer: 0 },
-      { q: "Meaning of: Break the ice", options: ["Start a conversation", "Destroy something", "Create problems", "End a meeting"], answer: 0 },
-      // Add upto 20 questions
-    ]
+// Question bank
+const questionBank = {
+  vocabulary: {
+    ows: {
+      mock1: [
+        {
+          question: "A person who hates mankind",
+          options: ["Philanthropist", "Misanthrope", "Optimist", "Altruist"],
+          answer: "Misanthrope"
+        },
+        {
+          question: "A person who loves books",
+          options: ["Bibliophile", "Pedagogue", "Numismatist", "Philatelist"],
+          answer: "Bibliophile"
+        },
+        {
+          question: "A speech made without preparation",
+          options: ["Manuscript", "Extempore", "Lecture", "Debate"],
+          answer: "Extempore"
+        },
+        {
+          question: "One who eats human flesh",
+          options: ["Cannibal", "Carnivorous", "Herbivorous", "Omnivorous"],
+          answer: "Cannibal"
+        },
+        {
+          question: "Government by a king",
+          options: ["Monarchy", "Democracy", "Oligarchy", "Autocracy"],
+          answer: "Monarchy"
+        }
+        // 👉 Aise hi 20 questions tak add kar lena
+      ]
+    },
+    idioms: {
+      mock1: [
+        {
+          question: "Idiom: 'Break the ice'",
+          options: [
+            "Start a conversation",
+            "Fall on ice",
+            "Win a prize",
+            "Do something impossible"
+          ],
+          answer: "Start a conversation"
+        },
+        {
+          question: "Idiom: 'Hit the sack'",
+          options: ["Go to bed", "Start working", "Fight", "Lose money"],
+          answer: "Go to bed"
+        },
+        {
+          question: "Idiom: 'Piece of cake'",
+          options: ["A tasty dish", "Something very easy", "A small problem", "Something incomplete"],
+          answer: "Something very easy"
+        },
+        {
+          question: "Idiom: 'Burn the midnight oil'",
+          options: ["Waste time", "Work late into the night", "Celebrate", "Sleep early"],
+          answer: "Work late into the night"
+        },
+        {
+          question: "Idiom: 'Once in a blue moon'",
+          options: ["Very often", "Very rare", "Impossible", "Everyday"],
+          answer: "Very rare"
+        }
+        // 👉 Aise hi 20 idioms tak add kar lena
+      ]
+    }
   }
 };
 
-let currentQuiz = null;
-let currentIndex = 0;
+// DOM elements
+const quizContainer = document.getElementById("quiz");
+let currentQuiz = [];
+let currentQuestionIndex = 0;
 let score = 0;
 
-function startMock(mockName) {
-  currentQuiz = quizzes[mockName];
-  currentIndex = 0;
+// Start Quiz
+function startQuiz(section, subSection, mock) {
+  const data = questionBank[section]?.[subSection]?.[mock];
+  if (!data) {
+    quizContainer.innerHTML = "<p>This test is coming soon 🚧</p>";
+    return;
+  }
+
+  currentQuiz = data;
+  currentQuestionIndex = 0;
   score = 0;
-
-  document.getElementById("quiz-title").innerText = currentQuiz.title;
-  document.getElementById("quiz-container").classList.remove("hidden");
-  document.getElementById("result").classList.add("hidden");
-  document.getElementById("restart-btn").classList.add("hidden");
-  document.getElementById("next-btn").classList.remove("hidden");
-
   showQuestion();
 }
 
+// Show question
 function showQuestion() {
-  const questionContainer = document.getElementById("question-container");
-  questionContainer.innerHTML = "";
-
-  if (currentIndex < currentQuiz.questions.length) {
-    const qData = currentQuiz.questions[currentIndex];
-    const qElement = document.createElement("h3");
-    qElement.innerText = (currentIndex + 1) + ". " + qData.q;
-    questionContainer.appendChild(qElement);
-
-    qData.options.forEach((opt, i) => {
-      const btn = document.createElement("button");
-      btn.innerText = opt;
-      btn.classList.add("option");
-      btn.onclick = () => checkAnswer(i);
-      questionContainer.appendChild(btn);
-    });
-  } else {
+  if (currentQuestionIndex >= currentQuiz.length) {
     showResult();
+    return;
   }
+
+  const q = currentQuiz[currentQuestionIndex];
+  let optionsHTML = "";
+  q.options.forEach(opt => {
+    optionsHTML += `
+      <label>
+        <input type="radio" name="option" value="${opt}">
+        ${opt}
+      </label><br>
+    `;
+  });
+
+  quizContainer.innerHTML = `
+    <p><b>Q${currentQuestionIndex + 1}:</b> ${q.question}</p>
+    ${optionsHTML}
+    <button onclick="submitAnswer()">Submit</button>
+  `;
 }
 
-function checkAnswer(selected) {
-  const correct = currentQuiz.questions[currentIndex].answer;
-  if (selected === correct) {
+// Submit answer
+function submitAnswer() {
+  const selected = document.querySelector('input[name="option"]:checked');
+  if (!selected) {
+    alert("Please select an option!");
+    return;
+  }
+
+  if (selected.value === currentQuiz[currentQuestionIndex].answer) {
     score++;
   }
-  currentIndex++;
+
+  currentQuestionIndex++;
   showQuestion();
 }
 
-function nextQuestion() {
-  showQuestion();
-}
-
+// Show result
 function showResult() {
-  document.getElementById("question-container").innerHTML = "";
-  document.getElementById("next-btn").classList.add("hidden");
-  const resultDiv = document.getElementById("result");
-  resultDiv.innerText = `You scored ${score} out of ${currentQuiz.questions.length}`;
-  resultDiv.classList.remove("hidden");
-  document.getElementById("restart-btn").classList.remove("hidden");
-}
-
-function restartQuiz() {
-  currentIndex = 0;
-  score = 0;
-  showQuestion();
-  document.getElementById("result").classList.add("hidden");
-  document.getElementById("restart-btn").classList.add("hidden");
-  document.getElementById("next-btn").classList.remove("hidden");
+  quizContainer.innerHTML = `
+    <h3>Quiz Completed ✅</h3>
+    <p>Your Score: ${score} / ${currentQuiz.length}</p>
+    <button onclick="location.reload()">Go Back</button>
+  `;
 }
