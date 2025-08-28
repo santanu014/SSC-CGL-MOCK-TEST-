@@ -1,98 +1,106 @@
+/* General Page Styling */
 body {
   font-family: Arial, sans-serif;
-  background: #f4f4f9;
   margin: 0;
   padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
 }
 
+/* Container */
 .container {
-  width: 90%;
-  max-width: 800px;
+  width: 80%;
   margin: auto;
   padding: 20px;
-  text-align: center;
 }
 
+/* Headings */
 h1 {
-  background: purple;
-  color: white;
-  padding: 15px;
-  border-radius: 8px;
+  text-align: center;
+  color: darkviolet;
+  margin-bottom: 20px;
 }
 
-.intro {
-  background: white;
-  padding: 15px;
+h2 {
+  color: purple;
+  border-bottom: 2px solid darkviolet;
+  padding-bottom: 5px;
   margin-top: 20px;
-  border-radius: 8px;
-  text-align: justify;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-.section {
-  background: white;
-  padding: 15px;
-  margin-top: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  text-align: left;
+h3 {
+  color: darkviolet;
+  margin-top: 15px;
 }
 
-.sub-section {
-  margin-top: 10px;
-}
-
+/* Buttons */
 button {
   margin: 5px;
-  padding: 10px 20px;
-  background: purple;
+  padding: 12px 20px;
+  background: linear-gradient(45deg, purple, darkviolet);
   color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
-}
-
-button:disabled {
-  background: #bbb;
-  cursor: not-allowed;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, background 0.3s ease;
 }
 
 button:hover:enabled {
-  background: darkviolet;
+  transform: scale(1.05);
+  background: linear-gradient(45deg, darkviolet, purple);
 }
 
-.quiz {
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Quiz Styling */
+#quiz {
   margin-top: 20px;
-  padding: 20px;
-  background: white;
+  padding: 15px;
+  background: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-.hidden {
-  display: none;
+#quiz p {
+  font-size: 16px;
 }
 
-.option {
+#quiz label {
   display: block;
-  margin: 10px 0;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  cursor: pointer;
+  margin-bottom: 8px;
 }
 
-.option:hover {
-  background: #f0f0f0;
-}
-
-.footer-section {
+/* Footer */
+footer {
   text-align: center;
+  background: #333;
+  color: white;
+  padding: 15px;
+  margin-top: 40px;
 }
-.footer-section a {
-  color: purple;
+
+footer a {
+  color: lightblue;
   text-decoration: none;
 }
-.footer-section a:hover {
+
+footer a:hover {
   text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .container {
+    width: 95%;
+    padding: 10px;
+  }
+
+  button {
+    width: 100%;
+    margin: 8px 0;
+  }
 }
