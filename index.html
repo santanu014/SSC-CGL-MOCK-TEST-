@@ -1,91 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>SSC CGL Mock Tests</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SSC CGL Mock Test</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>SSC CGL 2025 Mock Test Series</h1>
-    </header>
+  <div class="container">
+    <h1>SSC CGL Mock Test Series</h1>
 
-    <main>
-        <section class="test-card" id="vocab-card">
-            <h2>English Vocabulary</h2>
+    <!-- About SSC CGL -->
+    <div class="intro">
+      <p>
+        The SSC Combined Graduate Level (CGL) Examination is one of the most popular competitive exams in India, 
+        conducted by the Staff Selection Commission (SSC). It is held to recruit candidates for various posts 
+        in ministries, departments, and organizations of the Government of India. 
+        Here, we bring you topic-wise mock tests to practice and boost your preparation for SSC CGL 2025.
+      </p>
+    </div>
 
-            <div class="topic-block">
-                <h3>1. One Word Substitution</h3>
-                <div class="mock-buttons">
-                    <button onclick="startTest('ows_1')">Mock-1</button>
-                    <button class="disabled" disabled>Mock-2 (Coming soon)</button>
-                    <button class="disabled" disabled>Mock-3 (Coming soon)</button>
-                    <button class="disabled" disabled>Mock-4 (Coming soon)</button>
-                </div>
-            </div>
-            <div class="topic-block">
-                <h3>2. Idioms And Phrases</h3>
-                <div class="mock-buttons">
-                    <button onclick="startTest('idioms_1')">Mock-1</button>
-                    <button class="disabled" disabled>Mock-2 (Coming soon)</button>
-                    <button class="disabled" disabled>Mock-3 (Coming soon)</button>
-                    <button class="disabled" disabled>Mock-4 (Coming soon)</button>
-                </div>
-            </div>
-            <div class="topic-block">
-                <h3>3. Synonyms</h3>
-                <div class="mock-buttons">
-                    <button onclick="startTest('synonyms_1')">Mock-1</button>
-                    <button class="disabled" disabled>Mock-2 (Coming soon)</button>
-                    <button class="disabled" disabled>Mock-3 (Coming soon)</button>
-                    <button class="disabled" disabled>Mock-4 (Coming soon)</button>
-                </div>
-            </div>
-            <div class="topic-block">
-                <h3>4. Antonyms</h3>
-                <div class="mock-buttons">
-                    <button onclick="startTest('antonyms_1')">Mock-1</button>
-                    <button class="disabled" disabled>Mock-2 (Coming soon)</button>
-                    <button class="disabled" disabled>Mock-3 (Coming soon)</button>
-                    <button class="disabled" disabled>Mock-4 (Coming soon)</button>
-                </div>
-            </div>
-            <div class="topic-block">
-                <h3>5. Spellings</h3>
-                <div class="mock-buttons">
-                    <button onclick="startTest('spelling_1')">Mock-1</button>
-                    <button class="disabled" disabled>Mock-2 (Coming soon)</button>
-                    <button class="disabled" disabled>Mock-3 (Coming soon)</button>
-                    <button class="disabled" disabled>Mock-4 (Coming soon)</button>
-                </div>
-            </div>
-        </section>
+    <!-- Vocabulary Section -->
+    <div class="section">
+      <h2>1. Vocabulary</h2>
+      
+      <div class="sub-section">
+        <h3>One Word Substitution</h3>
+        <button onclick="startMock('ows1')">Mock-1</button>
+      </div>
 
-        <!-- Other Subjects Coming Soon -->
-        <section class="test-card">
-            <h2>Other Subjects (Coming Soon)</h2>
-            <div class="other-buttons">
-                <button class="disabled" disabled>MATHEMATICS</button>
-                <button class="disabled" disabled>REASONING</button>
-                <button class="disabled" disabled>HISTORY</button>
-                <button class="disabled" disabled>POLITY</button>
-                <button class="disabled" disabled>GEOGRAPHY</button>
-                <button class="disabled" disabled>ECONOMY</button>
-                <button class="disabled" disabled>BIOLOGY</button>
-                <button class="disabled" disabled>CHEMISTRY</button>
-                <button class="disabled" disabled>PHYSICS</button>
-            </div>
-        </section>
+      <div class="sub-section">
+        <h3>Idioms and Phrases</h3>
+        <button onclick="startMock('idioms1')">Mock-1</button>
+        <button disabled>Mock-2 (Coming Soon)</button>
+      </div>
+    </div>
 
-        <!-- Quiz Section -->
-        <section id="quiz-section" style="display:none;">
-            <h2 id="quiz-title"></h2>
-            <div id="quiz-container"></div>
-            <button id="next-btn" onclick="nextQuestion()">Next</button>
-            <button id="submit-btn" onclick="submitTest()" style="display:none;">Submit Test</button>
-            <div id="quiz-result"></div>
-        </section>
-    </main>
-    <script src="script.js"></script>
+    <!-- Mathematics -->
+    <div class="section">
+      <h2>2. Mathematics</h2>
+      <button disabled>Test Coming Soon</button>
+    </div>
+
+    <!-- Reasoning -->
+    <div class="section">
+      <h2>3. Reasoning</h2>
+      <button disabled>Test Coming Soon</button>
+    </div>
+
+    <!-- GK & GS -->
+    <div class="section">
+      <h2>4. GK and GS</h2>
+      <button disabled>Test Coming Soon</button>
+    </div>
+
+    <!-- Quiz Area -->
+    <div id="quiz-container" class="quiz hidden">
+      <h2 id="quiz-title"></h2>
+      <div id="question-container"></div>
+      <button id="next-btn" onclick="nextQuestion()">Next</button>
+      <div id="result" class="hidden"></div>
+      <button id="restart-btn" class="hidden" onclick="restartQuiz()">Restart Quiz</button>
+    </div>
+
+    <!-- About Section -->
+    <div class="section footer-section">
+      <h2>About</h2>
+      <p>
+        This website is created for SSC CGL,CHSL,CPO,MTS,STENOGRAPHER,GD aspirants to practice Vocabulary, Reasoning, Mathematics, 
+        and General Awareness. All mock tests are designed to give you exam-level practice in a simple format. 
+        Our goal is to help students prepare effectively and succeed in competitive exams.
+      </p>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="section footer-section">
+      <h2>Contact</h2>
+      <p>If you have any feedback or suggestions, feel free to reach out:</p>
+      <p>Email: <a href="mailto: santanuacharya3111@gmail.com">ssc.mocktest@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/tanu014" target="_blank">github.com/tanu014</a></p>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
